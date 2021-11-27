@@ -9,6 +9,6 @@ router.get("/", (req, res) => {
   res.send("API up and running!");
 });
 
-router.get("/timeStories", storiesController.getTimeStories);
+router.get("/getTimeStories", storiesController.getTimeStories);
 
 module.exports = router;
