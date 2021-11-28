@@ -6,8 +6,8 @@ const getStories = (htmlString) => {
   const anchors = latestSections.match(/<\s*a href=[^>]*>(.*?)<\s*\/\s*a>/g);
   const stories = anchors.map((anchor) => {
     return {
-      title: anchor.match(/<a href=(\/[^>]+\/)/)[1],
-      link: anchor.match(/<a [^>]+>([^<]+)\<\/a\s*?\>/)[1],
+      title: anchor.match(/<a [^>]+>([^<]+)\<\/a\s*?\>/)[1],
+      link: `https://time.com${anchor.match(/<a href=(\/[^>]+\/)/)[1]}`,
     };
   });
   return stories;
